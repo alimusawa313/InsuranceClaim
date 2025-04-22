@@ -38,28 +38,46 @@ git clone https://github.com/yourusername/InsuranceClaim.git](https://github.com
 
 ## UI Screenshots
 
-### All View are available in Dark and Light Mode
+### All views are available in Dark and Light Mode
 
-#### Error no internet with alert
-![Error no internet with alert](https://drive.google.com/uc?export=view&id=1HF7fpc6-bZjOzsOaVmsqneNpbeL7LfYT)
+#### Error no internet with and without alert
 
-#### Error no internet without alert
-![Error no internet without alert](https://drive.google.com/uc?export=view&id=1hdcH_pbJ3mrVz06B6UjVo3WjNdDYf3oV)
+<p float="left">
+  <img src="https://drive.google.com/uc?export=view&id=1HF7fpc6-bZjOzsOaVmsqneNpbeL7LfYT" alt="Error no internet with alert" width="45%"/>
+  <img src="https://drive.google.com/uc?export=view&id=1hdcH_pbJ3mrVz06B6UjVo3WjNdDYf3oV" alt="Error no internet without alert" width="45%"/>
+</p>
 
-#### List View (Light Mode)
-![List View (Light Mode)](https://drive.google.com/uc?export=view&id=1G6a6jJVfKLXdG83-bQNudMTsTQrMjOvd)
+#### List View (Light Mode) and (Dark Mode)
 
-#### List View (Dark Mode)
-![List View (Dark Mode)](https://drive.google.com/uc?export=view&id=1MlEUK5TDiYNCV0-F4h73pqbQL6Y1vwZr)
+<p float="left">
+  <img src="https://drive.google.com/uc?export=view&id=1G6a6jJVfKLXdG83-bQNudMTsTQrMjOvd" alt="List View Light Mode" width="45%"/>
+  <img src="https://drive.google.com/uc?export=view&id=1MlEUK5TDiYNCV0-F4h73pqbQL6Y1vwZr" alt="List View Dark Mode" width="45%"/>
+</p>
 
-#### Search
-![Search](https://drive.google.com/uc?export=view&id=1ADjm6tLPtnxfU5fMUEC79Mh7yA89yx9p)
+#### Search and DropDown Filter
 
-#### DropDown Filter
-![DropDown Filter](https://drive.google.com/uc?export=view&id=1VcHhhSmf2hI76XpxfE46a3BUBNFh9Z_Y)
+<p float="left">
+  <img src="https://drive.google.com/uc?export=view&id=1ADjm6tLPtnxfU5fMUEC79Mh7yA89yx9p" alt="Search" width="45%"/>
+  <img src="https://drive.google.com/uc?export=view&id=1VcHhhSmf2hI76XpxfE46a3BUBNFh9Z_Y" alt="DropDown Filter" width="45%"/>
+</p>
 
-#### Detail View
-![Detail View](https://drive.google.com/uc?export=view&id=1UbwseUwOn7pEwsh0KlNuylnP4d8yEt6Y)
+#### Detail View and Custom PopUp Alert
 
-#### Custom PopUp Alert
-![Custom PopUp Alert](https://drive.google.com/uc?export=view&id=10yVJAlWSNFhHyZFKPOv2daz6hqweC80c)
+<p float="left">
+  <img src="https://drive.google.com/uc?export=view&id=1UbwseUwOn7pEwsh0KlNuylnP4d8yEt6Y" alt="Detail View" width="45%"/>
+  <img src="https://drive.google.com/uc?export=view&id=10yVJAlWSNFhHyZFKPOv2daz6hqweC80c" alt="Custom PopUp Alert" width="45%"/>
+</p>
+
+
+
+## Tests
+
+This project includes basic unit tests using **XCTest**.
+
+To run the tests:
+
+1. Open the project in Xcode.
+2. Select the **InsuranceClaim** scheme.
+3. Press `⌘ + U` to run all unit tests.
+4. Or navigate to the **Test Navigator** in Xcode and run individual tests from there.
+
