@@ -16,15 +16,15 @@ final class ClaimsViewModel: ObservableObject {
     @Published var isLoading = false
     @Published var errorMessage: String?
     @Published var isConnected = true
-
+    
     private let monitor = NWPathMonitor()
     private let queue = DispatchQueue.global(qos: .background)
-
+    
     var filteredClaims: [Claim] {
         let filtered = searchText.isEmpty
-            ? claims
-            : claims.filter { $0.title.localizedCaseInsensitiveContains(searchText) }
-
+        ? claims
+        : claims.filter { $0.title.localizedCaseInsensitiveContains(searchText) }
+        
         switch sortOption {
         case .claimIDAsc:
             return filtered.sorted { $0.id < $1.id }
@@ -36,7 +36,7 @@ final class ClaimsViewModel: ObservableObject {
             return filtered.sorted { $0.userId > $1.userId }
         }
     }
-
+    
     func loadClaims() async {
         isLoading = true
         do {
@@ -49,24 +49,24 @@ final class ClaimsViewModel: ObservableObject {
     }
     
     func refreshClaims() {
-            errorMessage = nil
-            Task {
-                if isConnected {
-                    await loadClaims()
-                } else {
-                    errorMessage = "No internet connection."
-                }
+        errorMessage = nil
+        Task {
+            if isConnected {
+                await loadClaims()
+            } else {
+                errorMessage = "No internet connection."
             }
         }
-
-        func startNetworkMonitoring() {
-            monitor.pathUpdateHandler = { path in
-                DispatchQueue.main.async {
-                    self.isConnected = path.status == .satisfied
-                }
+    }
+    
+    func startNetworkMonitoring() {
+        monitor.pathUpdateHandler = { path in
+            DispatchQueue.main.async {
+                self.isConnected = path.status == .satisfied
             }
-            monitor.start(queue: queue)
         }
+        monitor.start(queue: queue)
+    }
     
     
 }
