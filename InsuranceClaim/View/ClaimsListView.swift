@@ -30,14 +30,7 @@ struct ClaimsListView: View {
                             
                             ForEach(viewModel.filteredClaims) { claim in
                                 NavigationLink(destination: ClaimDetailView(claim: claim)) {
-                                    VStack(alignment: .leading) {
-                                        Text(claim.title)
-                                            .font(.headline)
-                                        Text(claim.body)
-                                            .lineLimit(2)
-                                            .font(.subheadline)
-                                            .foregroundColor(.gray)
-                                    }
+                                    ClaimRowView(claim: claim)
                                 }
                             }
                         }
