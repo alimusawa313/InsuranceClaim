@@ -38,6 +38,8 @@ git clone https://github.com/yourusername/InsuranceClaim.git](https://github.com
 
 ## UI Screenshots
 
+### All View are available in Dark and Light Mode
+
 #### Error no internet with alert
 ![Error no internet with alert](https://drive.google.com/uc?export=view&id=1HF7fpc6-bZjOzsOaVmsqneNpbeL7LfYT)
 
@@ -45,7 +47,19 @@ git clone https://github.com/yourusername/InsuranceClaim.git](https://github.com
 ![Error no internet without alert](https://drive.google.com/uc?export=view&id=1hdcH_pbJ3mrVz06B6UjVo3WjNdDYf3oV)
 
 #### List View (Light Mode)
-![Error no internet without alert](https://drive.google.com/uc?export=view&id=1G6a6jJVfKLXdG83-bQNudMTsTQrMjOvd)
+![List View (Light Mode)](https://drive.google.com/uc?export=view&id=1G6a6jJVfKLXdG83-bQNudMTsTQrMjOvd)
 
 #### List View (Dark Mode)
-![Error no internet without alert](https://drive.google.com/uc?export=view&id=1MlEUK5TDiYNCV0-F4h73pqbQL6Y1vwZr)
+![List View (Dark Mode)](https://drive.google.com/uc?export=view&id=1MlEUK5TDiYNCV0-F4h73pqbQL6Y1vwZr)
+
+#### Search
+![Search](https://drive.google.com/uc?export=view&id=1ADjm6tLPtnxfU5fMUEC79Mh7yA89yx9p)
+
+#### DropDown Filter
+![DropDown Filter](https://drive.google.com/uc?export=view&id=1VcHhhSmf2hI76XpxfE46a3BUBNFh9Z_Y)
+
+#### Detail View
+![Detail View](https://drive.google.com/uc?export=view&id=1UbwseUwOn7pEwsh0KlNuylnP4d8yEt6Y)
+
+#### Custom PopUp Alert
+![Custom PopUp Alert](https://drive.google.com/uc?export=view&id=10yVJAlWSNFhHyZFKPOv2daz6hqweC80c)
