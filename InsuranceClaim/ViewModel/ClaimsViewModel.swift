@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+import Network
 
 @MainActor
 final class ClaimsViewModel: ObservableObject {
@@ -15,6 +15,10 @@ final class ClaimsViewModel: ObservableObject {
     @Published var sortOption: SortOption = .claimIDAsc
     @Published var isLoading = false
     @Published var errorMessage: String?
+    @Published var isConnected = true
+
+    private let monitor = NWPathMonitor()
+    private let queue = DispatchQueue.global(qos: .background)
 
     var filteredClaims: [Claim] {
         let filtered = searchText.isEmpty
@@ -43,5 +47,27 @@ final class ClaimsViewModel: ObservableObject {
         }
         isLoading = false
     }
+    
+    func refreshClaims() {
+            errorMessage = nil
+            Task {
+                if isConnected {
+                    await loadClaims()
+                } else {
+                    errorMessage = "No internet connection."
+                }
+            }
+        }
+
+        func startNetworkMonitoring() {
+            monitor.pathUpdateHandler = { path in
+                DispatchQueue.main.async {
+                    self.isConnected = path.status == .satisfied
+                }
+            }
+            monitor.start(queue: queue)
+        }
+    
+    
 }
 

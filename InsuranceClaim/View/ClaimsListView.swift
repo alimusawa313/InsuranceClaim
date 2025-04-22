@@ -38,7 +38,16 @@ struct ClaimsListView: View {
                 }
                 .navigationTitle("Insurance Claims")
                 .searchable(text: $viewModel.searchText)
-                
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        Button(action: {
+                            viewModel.refreshClaims()
+                        }) {
+                            Image(systemName: "arrow.clockwise")
+                        }
+                        .accessibilityLabel("Refresh Claims")
+                    }
+                }
             }
         }
         .task {
@@ -52,6 +61,7 @@ struct ClaimsListView: View {
             )
         }
     }
+    
 }
 
 #Preview {
