@@ -39,4 +39,13 @@ git clone https://github.com/yourusername/InsuranceClaim.git](https://github.com
 ## UI Screenshots
 
 #### Error no internet with alert
-![Error no internet with alert]([https://photos.app.goo.gl/f53Rsk8Sq3wUx4Mn7](https://drive.google.com/file/d/1HF7fpc6-bZjOzsOaVmsqneNpbeL7LfYT/view?usp=sharing))
+![Error no internet with alert](https://drive.google.com/uc?export=view&id=1HF7fpc6-bZjOzsOaVmsqneNpbeL7LfYT)
+
+#### Error no internet without alert
+![Error no internet without alert](https://drive.google.com/uc?export=view&id=1hdcH_pbJ3mrVz06B6UjVo3WjNdDYf3oV)
+
+#### List View (Light Mode)
+![Error no internet without alert](https://drive.google.com/uc?export=view&id=1G6a6jJVfKLXdG83-bQNudMTsTQrMjOvd)
+
+#### List View (Dark Mode)
+![Error no internet without alert](https://drive.google.com/uc?export=view&id=1MlEUK5TDiYNCV0-F4h73pqbQL6Y1vwZr)
