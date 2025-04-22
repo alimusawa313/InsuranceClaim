@@ -7,19 +7,37 @@
 
 import Foundation
 
+enum SortOption: String, CaseIterable, Identifiable {
+    case claimIDAsc = "Claim ID ↑"
+    case claimIDDesc = "Claim ID ↓"
+    case claimantIDAsc = "Claimant ID ↑"
+    case claimantIDDesc = "Claimant ID ↓"
+
+    var id: String { self.rawValue }
+}
+
 @MainActor
 final class ClaimsViewModel: ObservableObject {
     @Published var claims: [Claim] = []
     @Published var searchText = ""
+    @Published var sortOption: SortOption = .claimIDAsc
     @Published var isLoading = false
     @Published var errorMessage: String?
 
     var filteredClaims: [Claim] {
-        if searchText.isEmpty {
-            return claims
-        }
-        return claims.filter {
-            $0.title.localizedCaseInsensitiveContains(searchText)
+        let filtered = searchText.isEmpty
+            ? claims
+            : claims.filter { $0.title.localizedCaseInsensitiveContains(searchText) }
+
+        switch sortOption {
+        case .claimIDAsc:
+            return filtered.sorted { $0.id < $1.id }
+        case .claimIDDesc:
+            return filtered.sorted { $0.id > $1.id }
+        case .claimantIDAsc:
+            return filtered.sorted { $0.userId < $1.userId }
+        case .claimantIDDesc:
+            return filtered.sorted { $0.userId > $1.userId }
         }
     }
 
